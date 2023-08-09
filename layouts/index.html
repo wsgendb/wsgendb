@@ -1,0 +1,177 @@
+{{- define "main" -}}
+{{- $mainCSS := resources.Get "css/main.css" | resources.Fingerprint "md5" -}}
+{{- $noscriptCSS := resources.Get "css/noscript.css" | resources.Fingerprint "md5" -}}
+{{- $fontawesomeCSS := resources.Get "css/fontawesome-all.min.css" | resources.Fingerprint "md5" -}}
+
+{{- $pic01 := resources.Get "pic01.jpg" -}}
+{{- $pic01 := $pic01.Resize (printf "%dx%d webp" $pic01.Width $pic01.Height) -}}
+
+{{- $pic02 := resources.Get "pic02.jpg" -}}
+{{- $pic02 := $pic02.Resize (printf "%dx%d webp" $pic02.Width $pic02.Height) -}}
+
+{{- $pic03 := resources.Get "pic03.jpg" -}}
+{{- $pic03 := $pic03.Resize (printf "%dx%d webp" $pic03.Width $pic03.Height) -}}
+
+{{- $pic04 := resources.Get "pic04.jpg" -}}
+{{- $pic04 := $pic04.Resize (printf "%dx%d webp" $pic04.Width $pic04.Height) -}}
+
+
+{{- $jqueryminJS := resources.Get "js/jquery.min.js" | resources.Fingerprint "md5" -}}
+{{- $jqueryscrollyJS := resources.Get "js/jquery.scrolly.min.js" | resources.Fingerprint "md5" -}}
+{{- $browserminJS := resources.Get "js/browser.min.js" | resources.Fingerprint "md5" -}}
+{{- $breakpointsminJS := resources.Get "js/breakpoints.min.js" | resources.Fingerprint "md5" -}}
+{{- $utilJS := resources.Get "js/util.js" | resources.Fingerprint "md5" -}}
+{{- $mainJS := resources.Get "js/main.js" | resources.Fingerprint "md5" -}}
+
+<!--
+	Photon by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+
+	modified by: ayham (www.ayham.xyz) to be accommodated for www.wsgendb.github.io
+-->
+<head>
+	<title>wsgen</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="{{ $fontawesomeCSS.Permalink }}" type='text/css'/>
+	<link rel="stylesheet" href="{{ $mainCSS.Permalink }}" />
+	<noscript><link rel="stylesheet" href="{{$noscriptCSS.Permalink}}" /></noscript>
+</head>
+<body class="is-preload">
+
+	<!-- Header -->
+	<section id="header">
+		<div class="inner">
+			<span class="icon solid major fa-cloud"></span>
+			<h1>Innovate <strong>Your</strong> Workflow<br />using <strong>wsgen</strong>.</h1>
+			<p>wsgen helps you generate A-Level worksheets efficiently,<br />
+				optimizing the entire process;<br />
+				from downloading papers to export.</p>
+			<ul class="actions special">
+				<li><a href="#one" class="button scrolly">Discover</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- One -->
+	<section id="one" class="main style1">
+		<div class="container">
+			<div class="row gtr-150">
+				<div class="col-6 col-12-medium">
+					<header class="major">
+						<h2>Batch Download Papers<br />
+						with one-click.</h2>
+					</header>
+					<p>wsgen provides a plethora of options for downloading A-Level papers. Choose your own begin date,
+					end date, sessions, and variants for download. Either provide your own hosting server or use the default
+					GCEGUIDE website.</p>
+				</div>
+				<div class="col-6 col-12-medium imp-medium">
+					<span class="image fit"><img src="{{ $pic01.Permalink }}" alt="" /></span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Two -->
+	<section id="two" class="main style2">
+		<div class="container">
+			<div class="row gtr-150">
+				<div class="col-6 col-12-medium">
+					<ul class="major-icons">
+					<li><span class="icon solid style1 major fa-code"></span></li>
+					<li><span class="icon solid style2 major fa-bolt"></span></li>
+						<li><span class="icon solid style3 major fa-camera-retro"></span></li>
+					<li><span class="icon solid style4 major fa-cog"></span></li>
+						<li><span class="icon solid style5 major fa-desktop"></span></li>
+						<li><span class="icon solid style6 major fa-calendar"></span></li>
+					</ul>
+				</div>
+				<div class="col-6 col-12-medium">
+					<header class="major">
+						<h2>Lorem ipsum dolor adipiscing<br />
+						amet dolor consequat</h2>
+					</header>
+					<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
+					<p>Blandit faucibus proin. Ac aliquam integer adipiscing enim non praesent vis commodo nunc phasellus cubilia ac risus accumsan. Accumsan blandit. Lobortis phasellus non lobortis dit varius mi varius accumsan lobortis. Blandit ante aliquam lacinia lorem lobortis semper morbi col faucibus vitae integer placerat accumsan orci eu mi odio tempus adipiscing adipiscing adipiscing curae consequat feugiat etiam dolore.</p>
+					<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Three -->
+	<section id="three" class="main style1 special">
+		<div class="container">
+			<header class="major">
+				<h2>Adipiscing amet consequat</h2>
+			</header>
+			<p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>
+			<div class="row gtr-150">
+				<div class="col-4 col-12-medium">
+					<span class="image fit"><img src="{{ $pic02.Permalink}}" alt="" /></span>
+					<h3>Magna feugiat lorem</h3>
+					<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+					<ul class="actions special">
+						<li><a href="#" class="button">More</a></li>
+					</ul>
+				</div>
+				<div class="col-4 col-12-medium">
+					<span class="image fit"><img src="{{ $pic03.Permalink}}" alt="" /></span>
+					<h3>Magna feugiat lorem</h3>
+					<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+					<ul class="actions special">
+						<li><a href="#" class="button">More</a></li>
+					</ul>
+				</div>
+				<div class="col-4 col-12-medium">
+					<span class="image fit"><img src="{{ $pic04.Permalink}}" alt="" /></span>
+					<h3>Magna feugiat lorem</h3>
+					<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+					<ul class="actions special">
+						<li><a href="#" class="button">More</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Four -->
+	<section id="four" class="main style2 special">
+		<div class="container">
+			<header class="major">
+				<h2>Ipsum feugiat consequat?</h2>
+			</header>
+			<p>Sed lacus nascetur ac ante amet sapien.</p>
+			<ul class="actions special">
+				<li><a href="#" class="button wide primary">Sign Up</a></li>
+			<li><a href="#" class="button wide">Learn More</a></li>
+			</ul>
+		</div>
+	</section>
+
+
+	<!-- Footer -->
+	<section id="footer">
+		<ul class="icons">
+			<li><a href="https://www.github.com/wsgendb"><span class="label">GitHub</span></a></li>
+			<li><a href="me@ayham.xyz"><span class="label">Email</span></a></li>
+		</ul>
+	<ul class="copyright">
+			<li>&copy; Ayham</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</section>
+
+	<!-- Scripts -->
+	<script src="{{ $jqueryminJS.Permalink }}"></script>
+	<script src="{{ $jqueryscrollyJS.Permalink }}"></script>
+	<script src="{{ $browserminJS.Permalink }}"></script>
+	<script src="{{ $breakpointsminJS.Permalink }}"></script>
+	<script src="{{ $utilJS.Permalink }}"></script>
+	<script src="{{ $mainJS.Permalink }}"></script>
+
+	<html>
+</body>
+{{ end }}
