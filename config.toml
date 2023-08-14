@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://wsgendb.github.io'
 languageCode = 'en-us'
 title = 'wsgen'
 theme = 'wsgentheme'
